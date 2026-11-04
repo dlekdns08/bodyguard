@@ -1,0 +1,11 @@
+{
+  "name": "bodyguard",
+  "displayName": "Bodyguard",
+  "description": "Vitals-aware autonomy: reads your Garmin Body Battery, stress, sleep and HRV and makes Claude Code ask before risky actions when you are running low.",
+  "version": "0.1.0",
+  "author": { "name": "dlekdns08", "url": "https://github.com/dlekdns08" },
+  "homepage": "https://github.com/dlekdns08/bodyguard",
+  "repository": "https://github.com/dlekdns08/bodyguard",
+  "license": "MIT",
+  "keywords": ["garmin", "wearable", "vitals", "hooks", "safety", "autonomy"]
+}

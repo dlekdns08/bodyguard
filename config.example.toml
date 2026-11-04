@@ -1,0 +1,18 @@
+# Copy to ~/.config/bodyguard/config.toml and edit. Every key is optional.
+[thresholds]
+low_body_battery = 25
+low_sleep_score = 50
+low_stress_avg = 75
+low_hrv_statuses = ["LOW"]
+
+rest_body_battery = 10
+rest_after = "00:30"
+rest_until = "05:00"
+rest_stress_avg = 50
+
+high_body_battery = 70
+high_sleep_score = 70
+high_stress_avg = 40
+high_hrv_statuses = ["BALANCED"]
+
+cache_ttl_seconds = 900

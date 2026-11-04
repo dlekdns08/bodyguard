@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bodyguard"
+version = "0.1.0"
+description = "Vitals-aware autonomy for Claude Code: reads your Garmin Body Battery, stress, sleep and HRV and dials the agent's autonomy up or down."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+keywords = ["claude-code", "garmin", "wearable", "agent", "hooks", "plugin"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+]
+dependencies = [
+    "garminconnect==0.3.2",
+]
+
+[project.scripts]
+bodyguard = "bodyguard.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dlekdns08/bodyguard"
+Repository = "https://github.com/dlekdns08/bodyguard"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bodyguard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

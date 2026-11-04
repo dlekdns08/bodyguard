@@ -1,0 +1,11 @@
+{
+  "name": "bodyguard-marketplace",
+  "owner": { "name": "dlekdns08" },
+  "plugins": [
+    {
+      "name": "bodyguard",
+      "source": "./",
+      "description": "Vitals-aware autonomy for Claude Code (Garmin Body Battery, stress, sleep, HRV)."
+    }
+  ]
+}
