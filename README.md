@@ -37,7 +37,7 @@ Here is what it looks like when Claude tries to force-push at 00:40 on a bad nig
   ⎿  Permission required
 
   bodyguard [LOW]: `git push --force origin main` looks like a force push and your
-  vitals are low (Body Battery 18 · sleep 71 · HRV LOW; Body Battery 18 < 25;
+  vitals are low (Body Battery 18 · sleep 74 · HRV LOW; Body Battery 18 < 25;
   HRV status LOW). Double-check before running it.
 
   Do you want to proceed?  ❯ Yes / No
@@ -46,7 +46,7 @@ Here is what it looks like when Claude tries to force-push at 00:40 on a bad nig
 And the status line underneath the prompt:
 
 ```
-🔋 BB 18 · 😴 71 · 😤 46 · HRV LOW · autonomy: LOW
+🔋 BB 18 · 😴 74 · 😤 46 · HRV LOW · autonomy: LOW
 ```
 
 ## Why
@@ -109,7 +109,7 @@ cd bodyguard && uv run bodyguard status
 bodyguard 0.1.0 — vibe coding, but it checks your actual vibes
 
   🔋 Body Battery   37
-  😴 Sleep          score 71  (6.8h)
+  😴 Sleep          score 74  (6.8h)
   😤 Stress         avg 46  max 93
   💓 HRV            LOW  (last night 31, weekly 38)
 
@@ -134,7 +134,7 @@ Add to `~/.claude/settings.json`, pointing at the plugin's `scripts/statusline.s
 }
 ```
 
-Output: `🔋 BB 37 · 😴 71 · 😤 46 · HRV LOW · autonomy: LOW`
+Output: `🔋 BB 37 · 😴 74 · 😤 46 · HRV LOW · autonomy: LOW`
 
 ## The autonomy policy
 
@@ -222,7 +222,7 @@ bodyguard hook <event>         pre-tool-use | session-start | user-prompt-submit
 **I don't have a Garmin.** Set `BODYGUARD_FAKE` and everything works without a watch:
 
 ```bash
-BODYGUARD_FAKE='{"body_battery": 18, "sleep_score": 71, "hrv_status": "LOW"}' uv run bodyguard status
+BODYGUARD_FAKE='{"body_battery": 18, "sleep_score": 74, "hrv_status": "LOW"}' uv run bodyguard status
 ```
 
 This is also how the tests and the demo run. Fields: `body_battery`, `stress_avg`, `stress_max`,

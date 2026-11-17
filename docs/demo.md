@@ -7,7 +7,7 @@
 Reproduce without a watch:
 
 ```bash
-export BODYGUARD_FAKE='{"body_battery": 18, "sleep_score": 71, "stress_avg": 46, "hrv_status": "LOW"}'
+export BODYGUARD_FAKE='{"body_battery": 18, "sleep_score": 74, "stress_avg": 46, "hrv_status": "LOW"}'
 
 uv run bodyguard status
 uv run bodyguard statusline
@@ -23,7 +23,7 @@ Expected hook output:
   "hookSpecificOutput": {
     "hookEventName": "PreToolUse",
     "permissionDecision": "ask",
-    "permissionDecisionReason": "bodyguard [LOW]: `git push --force origin main` looks like a force push and your vitals are low (Body Battery 18 · sleep 71 · stress 46 · HRV LOW; Body Battery 18 < 25; HRV status LOW). Double-check before running it."
+    "permissionDecisionReason": "bodyguard [LOW]: `git push --force origin main` looks like a force push and your vitals are low (Body Battery 18 · sleep 74 · stress 46 · HRV LOW; Body Battery 18 < 25; HRV status LOW). Double-check before running it."
   }
 }
 ```
